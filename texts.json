@@ -1,0 +1,271 @@
+{
+ "_note": "Approved texts for the LinkedIn posts, copied character for character on 12 Nov 2026: P1 from P1_for_LinkedIn.md, the other 37 from x-post-scheduler/posts.json. 'linkedin_variant' is a LinkedIn-only wording and is used only when 'use_variant' is true, after Sunil approves it. Never edit 'text'.",
+ "texts": {
+  "P1": {
+   "text": "Why not look for a bearing's defect frequency in the vibration spectrum? Each pass of a ball over a defect is a sharp impact whose energy spreads over a wide band, so that line is weak and buried. Our finite-element model and experiments both showed it. https://suniltyagi.in/publications/",
+   "chars": 289,
+   "source": "P1_for_LinkedIn.md",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P2": {
+   "text": "Envelope detection and the continuous wavelet transform both find an outer-race fault in a bearing. Inner-race and ball faults are harder for the envelope method; the wavelet map shows their high-frequency impacts directly. With S. K. Panigrahi, 2017: https://suniltyagi.in/publications/",
+   "chars": 287,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P3": {
+   "text": "Envelope detection needs a band. The usual rule centres it on a resonance, 3 to 4 times the highest defect frequency wide. That resonance may not be the one the fault excited. S. K. Panigrahi and I let particle swarm optimisation choose the band instead. https://suniltyagi.in/publications/",
+   "chars": 290,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P4": {
+   "text": "What the optimised envelope showed: the defect-frequency peak stands far higher above the mean spectrum level than in the raw spectrum, and it helps most at the incipient stage. Heavier load and a more severe defect both made identification harder. https://suniltyagi.in/publications/",
+   "chars": 284,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P5": {
+   "text": "To tell a healthy bearing from a faulty one we used plain features: the five highest peaks of the vibration signal, its statistical moments and the peak of its power spectral density. Over 19 cases the SVM beat the neural network in almost all. https://suniltyagi.in/publications/",
+   "chars": 280,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P6": {
+   "text": "Pre-processing the vibration signal with a discrete wavelet transform, and taking features from the level-1 details, helped both classifiers and cut their training iterations. In my 2008 study it raised the neural network's success in 17 of 19 cases. https://suniltyagi.in/publications/",
+   "chars": 286,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P7": {
+   "text": "You rarely have vibration records of every kind of bearing fault. In our 2017 study, signals from one fault type were enough to diagnose a bearing with another, probably because the features capture the peaky, impact-like character of the vibration. https://suniltyagi.in/publications/",
+   "chars": 285,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "Q1": {
+   "text": "A #quantum particle in superposition is a combination of several states at once. Each state has a probability of being observed, and observing destroys the combination: you only ever see one definite state. (Ch. 1, open edition of Hughes et al.) https://unlockqubits.com/read-book",
+   "chars": 280,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "O1": {
+   "text": "Where does a #submarine's sonar echo come from? On a generic 66 m double-hull boat at 5 kHz, SSR-Sim puts the beam echo at 43 dB, and more than half of it comes from the flat sides of the sail. Bow-on, the echo is 33 dB weaker. https://oravontsystems.com/research/ssr-sim-submarine-sonar-echo/",
+   "chars": 293,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P8": {
+   "text": "For gear faults S. K. Panigrahi and I built a hybrid classifier: a neural network whose output layer is replaced by a support vector machine. It did significantly better than either alone, and still classified correctly with noise added. #MachineLearning https://suniltyagi.in/publications/",
+   "chars": 290,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P9": {
+   "text": "Training a neural network with a genetic algorithm first and back-propagation after beat either method alone on gearbox faults. The price is time: beyond about 300 generations the error fell slowly, and 10,000 generations took about 46.5 hours. https://suniltyagi.in/publications/",
+   "chars": 280,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "Q2": {
+   "text": "A qubit is written with two amplitudes, one for 0 and one for 1. Square an amplitude and you have the probability of measuring that outcome. Any physical change to the qubit is a unitary matrix acting on them. (Ch. 2, open edition of Hughes et al.) https://unlockqubits.com/read-book",
+   "chars": 283,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "O2": {
+   "text": "Thin plating is partly transparent to sonar. By the mass law, 8 mm of steel at 5 kHz reflects about 30% of the sound energy and passes about 70%. On a double hull the pressure hull behind echoes too; in our worked case it returns more than the outer hull. https://oravontsystems.com/research/ssr-sim-submarine-sonar-echo/",
+   "chars": 321,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P10": {
+   "text": "All of that bearing work rests on one move: band-pass the signal, take its envelope, read the envelope's spectrum. #Sonar analysts do the same to a ship's propeller noise and call it DEMON. One method, two machines. https://suniltyagi.in/notes/demon-analysis/",
+   "chars": 259,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "Q3": {
+   "text": "A beam splitter puts a single photon into a superposition of two paths. The Mach–Zehnder interferometer is the experimental evidence that the photon really does take both paths at once. #QuantumComputing (Ch. 3, open edition of Hughes et al.) https://unlockqubits.com/read-book",
+   "chars": 277,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P11": {
+   "text": "A cavitating propeller hisses across hundreds to thousands of hertz. The hiss is not steady: it rises and falls as each blade sweeps through the wake. Take the spectrum of that loudness, not of the sound itself, and you can read the propeller. #sonar https://suniltyagi.in/notes/demon-analysis/",
+   "chars": 294,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P12": {
+   "text": "A shaft at 120 RPM turns at 2 Hz. With four blades, the blade rate is 8 Hz. In the envelope spectrum of my sample clip the tallest line is at 10 Hz: a shaft harmonic, not the blade rate. Trust the spacing of the comb, not the height of one peak. https://suniltyagi.in/notes/demon-analysis/",
+   "chars": 289,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "O3": {
+   "text": "From 1 to 20 kHz the beam echo of our generic 66 m hull rises from 33 to 56 dB, about 5 to 6 dB per doubling. A flat plate's echo rises 6 dB per doubling and a cylinder's 3 dB, and the flat sides of the sail dominate. The flash also narrows, as λ/L. https://oravontsystems.com/research/ssr-sim-submarine-sonar-echo/",
+   "chars": 315,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "Q4": {
+   "text": "An electron's spin is quantised: measured, it is up or down. The measurement basis decides what a result means. A Stern–Gerlach magnet acting on the spin makes the electron a qubit: a simple model #quantum computer. (Ch. 4, open edition of Hughes et al.) https://unlockqubits.com/read-book",
+   "chars": 289,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P13": {
+   "text": "The choice of band decides DEMON too. Band-pass where a ship does not cavitate and you demodulate ambient noise. A slow tanker cavitates far lower in frequency than a fast small craft. When the class is unknown, I let a particle swarm search for the band. https://github.com/Oravont/DEMON-Analysis",
+   "chars": 297,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P14": {
+   "text": "DEMON caught a bug that my spectrograms hid. My synthetic generator modulated sea swell at a fixed 0.5 Hz, and its harmonics fell at 1.0, 1.5 and 2.0 Hz. 2 Hz is a believable shaft rate. Real swell sits at 0.05–0.15 Hz. Fixed, and checked on every build. https://suniltyagi.in/notes/demon-analysis/",
+   "chars": 298,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "Q5": {
+   "text": "RSA assumes that factoring a large integer into primes is too hard. Shor's algorithm on a large stable quantum computer would break that. BB84 is one answer: a secret key shared so that an eavesdropper can be caught. (Ch. 5, open edition of Hughes et al.) https://unlockqubits.com/read-book",
+   "chars": 290,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "O4": {
+   "text": "'Range much greater than length' is not enough for a long hull. At 5 kHz a 40 m hull is in its near field inside 2.7 km, and a far-field formula overstates its beam echo by about 10 dB at 1 km. https://oravontsystems.com/notes/target-strength/what-an-echo-can-tell-a-sonar/",
+   "chars": 273,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P15": {
+   "text": "A level without its reference is not a measurement. Under water the reference pressure is 1 µPa; in air, 20 µPa. The same pressure therefore reads 26 dB higher in water, before impedance is considered. Never compare a #sonar with a jet engine in raw dB. https://suniltyagi.in/notes/underwater-acoustics-for-ml-engineers/",
+   "chars": 320,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P16": {
+   "text": "To synthesise noise with a given spectrum, never model p²(t). Go from the PSD to an amplitude spectrum, give each bin a random phase, and inverse-FFT to get p(t). Squaring puts a line at 2f for every tone at f and distorts the Gaussian statistics. https://suniltyagi.in/notes/synthetic-dataset/",
+   "chars": 294,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "Q6": {
+   "text": "A quantum calculation is a sequence of gates acting on qubits, and every gate is a unitary matrix. Common single-qubit gates: X, Z and H. The Hadamard gate, H, does for a qubit what a beam splitter does for a photon. (Ch. 6, open edition of Hughes et al.) https://unlockqubits.com/read-book",
+   "chars": 290,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "O5": {
+   "text": "What does a coating buy a #submarine? In our worked case, about 7 dB bow and stern but only 4 dB on the beam. The gain comes mostly from cutting the sound that passes through the outer hull, from 70% to 4%. Invented hull, illustrative coating. https://oravontsystems.com/research/ssr-sim-submarine-sonar-echo/",
+   "chars": 309,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P17": {
+   "text": "Most #MachineLearning on ship noise answers 'what type of vessel is this?' Re-identification asks 'which hull is this?', and must be able to answer 'none that I know'. How that works, with a runnable NumPy example: https://suniltyagi.in/notes/vessel-re-identification/",
+   "chars": 268,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P18": {
+   "text": "No single spectrogram window resolves both slow machinery tonals and millisecond transients. SKANN reads the raw hydrophone waveform with four banks of learned filters, about 16 ms to 1 s long, and attention chooses which scales to trust. https://arxiv.org/abs/2609.07399",
+   "chars": 271,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "Q7": {
+   "text": "Entanglement is non-classical information shared between quantum states, created when qubits interact. A two-qubit gate such as CNOT produces it. Without it a quantum computer could do nothing a classical one cannot. (Ch. 7, open edition of Hughes et al.) https://unlockqubits.com/read-book",
+   "chars": 290,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P19": {
+   "text": "You can add a new vessel to an acoustic re-identification system without retraining it. Pass its recordings once through the frozen network and store the fingerprints in a gallery. Enrolling several passages per vessel is the biggest lever on recall. https://suniltyagi.in/notes/vessel-re-identification/",
+   "chars": 304,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "O6": {
+   "text": "Why not solve the wave equation exactly for a #sonar echo? The cost grows with the square of frequency. At 5 kHz, meshing 2,000 m² of hull needs about 800,000 elements; at 20 kHz, sixteen times that. Fine for a benchmark, impractical in a design loop. https://oravontsystems.com/notes/target-strength/what-an-echo-can-tell-a-sonar/",
+   "chars": 331,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "Q8": {
+   "text": "#Quantum teleportation moves no matter. Alice and Bob share an entangled pair, and Alice transfers the state of a third, unknown qubit into Bob's. Only information travels, and no one needs to know what it was. (Ch. 8, open edition of Hughes et al.) https://unlockqubits.com/read-book",
+   "chars": 284,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P20": {
+   "text": "Re-identification results are easy to overstate. Split by vessel, not by clip. Match across recordings, not within one. In my preprint, removing recordings of the same transit took 16–21 points off rank-1 on public data. https://arxiv.org/abs/2609.07399",
+   "chars": 253,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P21": {
+   "text": "What my SKANN preprint supports, stated plainly: on a 40-hull public gallery the right vessel is ranked first for one query in four (0.25), with AUC 0.82; fused with a tonal method, 0.35. Enough for an analyst's shortlist, not identification. Data: https://doi.org/10.5281/zenodo.22160137",
+   "chars": 288,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "O7": {
+   "text": "In Oravont's synthetic dataset, sea noise follows digitised Knudsen curves: the whole-band level rises from 77.6 dB re 1 µPa at sea state 0 to 103.6 dB at sea state 6. Each vessel is mixed 6 dB above it, an RMS pressure about twice the ambient. https://huggingface.co/datasets/suniltyagi/underwater-acoustic-synthetic-dataset",
+   "chars": 325,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "Q9": {
+   "text": "A #quantum computer can apply a function to all inputs at once. The catch is the read-out: results come only by measuring, and too many measurements ruin the advantage. Deutsch–Jozsa shows the gain on a toy problem. (Ch. 9, open edition of Hughes et al.) https://doi.org/10.5281/zenodo.14795386",
+   "chars": 294,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  },
+  "P22": {
+   "text": "A limit worth stating: in my preprint, a fingerprint learned on one hydrophone network did not recognise vessels on another. Enrolment adds vessels to a gallery; it does not adapt the model to a new recording chain. https://arxiv.org/abs/2609.07399",
+   "chars": 248,
+   "source": "x-post-scheduler/posts.json",
+   "linkedin_variant": null,
+   "use_variant": false
+  }
+ }
+}

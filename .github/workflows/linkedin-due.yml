@@ -1,0 +1,72 @@
+name: Post due LinkedIn posts
+
+on:
+  schedule:
+    # Backup trigger only; cron-job.org is the main one. Same minutes as the
+    # cron-job (:12, :18, :39, :57 IST, 09:12-22:57 IST). GitHub counts in UTC:
+    # :12/:18 IST = :42/:48 UTC of the hour before; :39/:57 IST = :09/:27 UTC.
+    - cron: "42,48 3-16 * * *"
+    - cron: "9,27 4-17 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "dry-run sends nothing; preflight calls /v2/userinfo and uploads P1's image without posting; post-due posts what is due (only if POSTING_ENABLED is true)"
+        type: choice
+        options:
+          - dry-run
+          - preflight
+          - post-due
+        default: dry-run
+
+permissions:
+  contents: write
+
+# Never let two runs overlap, so a post can't be picked up twice.
+concurrency:
+  group: linkedin-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      # The branch as it is now, not the commit the run was queued with.
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref }}
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Run linkedin_post_due.py
+        timeout-minutes: 10
+        env:
+          MODE: ${{ github.event_name == 'schedule' && 'post-due' || inputs.mode }}
+          POSTING_ENABLED: ${{ vars.POSTING_ENABLED }}
+          LINKEDIN_ACCESS_TOKEN: ${{ (github.event_name == 'schedule' || inputs.mode != 'dry-run') && secrets.LINKEDIN_ACCESS_TOKEN || '' }}
+          LINKEDIN_PERSON_URN: ${{ (github.event_name == 'schedule' || inputs.mode != 'dry-run') && secrets.LINKEDIN_PERSON_URN || '' }}
+        run: |
+          echo "Mode: $MODE"
+          case "$MODE" in
+            dry-run)   python linkedin_post_due.py --dry-run ;;
+            preflight) python linkedin_post_due.py --preflight ;;
+            post-due)  python linkedin_post_due.py ;;
+            *) echo "::error::Unknown mode"; exit 1 ;;
+          esac
+
+      - name: Commit linkedin_posted.json
+        # Runs even if posting failed, so every recorded post and attempt is kept.
+        if: always()
+        run: |
+          if git diff --quiet -- linkedin_posted.json; then
+            echo "linkedin_posted.json unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add linkedin_posted.json
+          git commit -m "Record LinkedIn posts ($(date -u +%Y-%m-%dT%H:%MZ))"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
